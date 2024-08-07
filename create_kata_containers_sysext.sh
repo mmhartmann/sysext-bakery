@@ -52,6 +52,7 @@ ln -sf /opt/kata/bin/containerd-shim-kata-v2 containerd-shim-kata-stratovirt-v2
 ln -sf /opt/kata/bin/containerd-shim-kata-v2 containerd-shim-kata-v2
 ln -sf /opt/kata/bin/kata-runtime kata-runtime
 
+cd "${SCRIPTFOLDER}"
 RELOAD=1 "${SCRIPTFOLDER}"/bake.sh "${SYSEXTNAME}"
 rm -rf "${SCRIPTFOLDER}/${SYSEXTNAME}"
 rm -rf "${SCRIPTFOLDER}/kata-containers"
